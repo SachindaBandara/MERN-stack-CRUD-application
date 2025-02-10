@@ -57,6 +57,8 @@ router.put("/:id", async (req, res) => {
 
     if (req.body.title != null) task.title = req.body.title;
     if (req.body.description != null) task.description = req.body.description;
+    if (req.body.startDate != null) task.startDate = req.body.startDate;
+    if (req.body.endDate != null) task.endDate = req.body.endDate;
     if (req.body.completed != null) task.completed = req.body.completed;
 
     const updatedTask = await task.save();
